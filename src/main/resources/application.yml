@@ -95,9 +95,9 @@ logging:
   level:
     com.xiaoi.south.manager.dao: DEBUG
 #CheckLink
-checklink.url:  http://govhkpocr.demo.xiaoi.com/HKyztRobot/irobot/getCheckLine
+checklink.url:  http://localhost/HKyztRobot/irobot/getCheckLine
 #manager login url
-manager.login.url: http://govhkpocm.demo.xiaoi.com/manager/clustermgr/login.jsp
+manager.login.url: http://localhost/manager/clustermgr/login.jsp
 #二开manager地址
-manager.url: http://govhkpocm.demo.xiaoi.com/hkyztmgr/crawlerlink/
+manager.url: http://localhost/hkyztmgr/crawlerlink/
 scheduling.enabled: true
