@@ -9,19 +9,19 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     hk: #数据源1
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://172.16.5.24:3306/govhkhk?useUnicode=true&characterEncoding=utf8&useSSL=false&tinyInt1isBit=true
+      url: jdbc:mysql://localhost:3306/govhkhk?useUnicode=true&characterEncoding=utf8&useSSL=false&tinyInt1isBit=true
       username: govhk
       password: govhk09PO
     sc: #数据源2
       enabled: true
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://172.16.5.24:3306/govhksc?useUnicode=true&characterEncoding=utf8&useSSL=false&tinyInt1isBit=true
+      url: jdbc:mysql://localhost:3306/govhksc?useUnicode=true&characterEncoding=utf8&useSSL=false&tinyInt1isBit=true
       username: govhk
       password: govhk09PO
     en: #数据源3
       enabled: true
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://172.16.5.24:3306/govhken?useUnicode=true&characterEncoding=utf8&useSSL=false&tinyInt1isBit=true
+      url: jdbc:mysql://localhost:3306/govhken?useUnicode=true&characterEncoding=utf8&useSSL=false&tinyInt1isBit=true
       username: govhk
       password: govhk09PO
     druid:
@@ -95,9 +95,9 @@ logging:
   level:
     com.xiaoi.south.manager.dao: DEBUG
 #CheckLink
-checklink.url:  http://govhkpocr.demo.xiaoi.com/HKyztRobot/irobot/getCheckLine
+checklink.url:  http://localhost/HKyztRobot/irobot/getCheckLine
 #manager login url
-manager.login.url: http://govhkpocm.demo.xiaoi.com/manager/clustermgr/login.jsp
+manager.login.url: http://localhost/manager/clustermgr/login.jsp
 #二开manager地址
-manager.url: http://govhkpocm.demo.xiaoi.com/hkyztmgr/crawlerlink/
+manager.url: http://localhost/hkyztmgr/crawlerlink/
 scheduling.enabled: true
