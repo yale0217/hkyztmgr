@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xiaoi.south.manager.dao.CrawlerDao" >
+    <insert id="insertForeach" >
+        insert into om_crawler (id
+        ,classification
+        ,object
+        ,formname
+        ,formid
+        ,formurl
+        ,reptiletime
+        ,reptiledate
+        )
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.id},#{item.classification},#{item.object},#{item.formname},#{item.formid},#{item.formurl}, #{item.reptiletime},#{item.reptiledate})
+        </foreach>
+    </insert>
+    <select id="getCrawlerList" resultType="com.xiaoi.south.manager.entity.Crawler">
+           select classification,object,formname,formid,formurl from om_crawler where reptiledate=#{reptiledate} and classification=#{classification} and object=#{object} ORDER BY classification,object desc
+    </select>
+    <select id="getCrawlerObjectList" resultType="com.xiaoi.south.manager.entity.Crawler">
+          SELECT DISTINCT classification,object	FROM om_crawler WHERE reptiledate=#{reptiledate} ORDER BY	classification,object DESC
+    </select>
+</mapper>
