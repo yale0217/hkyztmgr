@@ -21,7 +21,7 @@
         <commons-lang3.version>3.4</commons-lang3.version>
         <commons-codec.version>1.10</commons-codec.version>
         <mybatis-spring-boot.version>1.2.0</mybatis-spring-boot.version>
-        <fastjson.version>1.2.62</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <druid.version>1.1.2</druid.version>
         <!--以下两项需要如果不配置，解析themleaft 会有问题-->
         <thymeleaf.version>3.0.2.RELEASE</thymeleaf.version>
